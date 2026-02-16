@@ -418,3 +418,149 @@
 // }).finally(()=>{
 //     console.log("Go to Sleep")
 // })
+
+// console.log("First Line")
+// setTimeout(()=>{
+//     console.log("Inside Timeout")
+// },0)
+// const p=new Promise ((resolve,reject)=>{
+//     resolve()
+// })
+// p.then(()=>{
+//     console.log("Inside Promise")
+// }).catch(()=>{
+//     console.log("Inside Catch")
+// })
+// const p2=new Promise((resolve,reject)=>{
+//     resolve()
+// })
+
+// p2.then(()=>{
+//     console.log("Inside Promise")
+// }).catch(()=>{
+//     console.log("Inside Catch")
+// })
+// const p3=new Promise((resolve,reject)=>{
+//     resolve()
+// })
+
+// p3.then(()=>{
+//     console.log("Inside Promise")
+// }).catch(()=>{
+//     console.log("Inside Catch")
+// })
+// console.log("Last Line")
+
+// function orderFood(){
+//     return new Promise(function(resolve,reject){
+//         setTimeout(()=>{
+//             console.log("Food Ordered")
+//             resolve("Food Ordered")
+//         },1000)
+//     })
+// }
+
+// function prepareFood(){
+//     return new Promise(function(resolve,reject){
+//         setTimeout(()=>{
+//             console.log("Food Prepared")
+//             resolve("Food Prepared")
+//         },1000)
+//     })
+// }
+
+// function deliverFood(){
+//     return new Promise(function(resolve,reject){
+//         setTimeout(()=>{
+//             console.log("Food Delivered")
+//             resolve("Food Delivered")
+//         },1000)
+//     })
+// }
+
+// async function order(){
+//     await orderFood()
+//     await prepareFood()
+//     await deliverFood()
+// }
+
+// async function order(){
+//     const data=await orderFood()
+//     console.log(data)
+//     await prepareFood()
+//     await deliverFood()
+// }
+
+// orderFood().then((data)=>{
+//     console.log(data)
+//     return prepareFood()
+// }).then((data)=>{
+//     console.log(data)
+//     return deliverFood()
+// }).then((data)=>{
+//     console.log(data)
+// }).catch((err)=>{
+//     console.log(err)
+// })
+
+// console.log("first line")
+// try{
+//     let sample=324
+//     console.log(sample)
+// }catch(error){
+//     console.log(error)
+// }finally{
+//     console.log("Finally block")
+// }
+// console.log("last line")
+
+// console.log("first line")
+// try{
+//     // let sample=324
+//     // console.log(sample)
+//     let age=15
+//     if(age<18){
+//         //error
+//         throw new Error("Access Denied")
+//     }
+// }catch(error){
+//     console.log(error)
+// }finally{
+//     console.log("Finally block")
+// }
+// console.log("last line")
+
+// async function getData() {
+//     try{
+//     const reponse= await fetch("https://dummyjson.com/products")
+//     console.log(response.ok)
+//     if(response.ok===false)throw new error("Data not found")
+//     const data= await reponse.json()
+//     console.log(data)
+//     // data.products.foreach((ele)=>{
+//     //     console.log(ele.price)
+//     // })
+//     }catch(error){
+//         console.log("Data not found")
+//     }
+// }
+
+// getData()
+
+async function getData() {
+    try{
+    const reponse= await fetch("https://dummyjson.com/products")
+    console.log(response)
+    console.log(response.ok)
+    if(response.ok===false)throw new error("Data not found")
+    const data= await reponse.json()
+    console.log(data)
+    // data.products.foreach((ele)=>{
+    //     console.log(ele.price)
+    // })
+    }catch(error){
+        console.log("Data not found")
+    }
+}
+
+getData()
