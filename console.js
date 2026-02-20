@@ -547,20 +547,85 @@
 
 // getData()
 
-async function getData() {
-    try{
-    const reponse= await fetch("https://dummyjson.com/products")
-    console.log(response)
-    console.log(response.ok)
-    if(response.ok===false)throw new error("Data not found")
-    const data= await reponse.json()
-    console.log(data)
-    // data.products.foreach((ele)=>{
-    //     console.log(ele.price)
-    // })
-    }catch(error){
-        console.log("Data not found")
-    }
-}
+// async function getData() {
+//     try{
+//     const reponse= await fetch("https://dummyjson.com/products")
+//     console.log(response)
+//     console.log(response.ok)
+//     if(response.ok===false)throw new error("Data not found")
+//     const data= await reponse.json()
+//     console.log(data)
+//     // data.products.foreach((ele)=>{
+//     //     console.log(ele.price)
+//     // })
+//     }catch(error){
+//         console.log("Data not found")
+//     }
+// }
 
-getData()
+// getData()
+
+// async function sendData() {
+//    try{
+//     const response=await fetch('https://dummyjson.com/products/add' , {
+//         method : 'POST' ,
+//         headers: { 'content-type' : 'application/json' },
+//         body: JSON.stringify({
+//             title: "Macbook",
+//             description: "Macbook Pro",
+//             price:100000,
+//             discountPerecentage:5,
+//             rating:4.5,
+//             stock:5,
+//             brand:"Apple"
+//         })
+//     })
+//     const data=await response.json()
+//     console.log(data)
+//    }catch(error){
+//     console.log("Data not found")
+//    }
+// }
+// sendData()
+
+// let obj={
+//     title:"Macbook",
+//     description: "Macbook Pro",
+// }
+
+// localStorage.setItem("obj",JSON.stringify(obj))
+// localStorage.setItem("name","chirkut")
+// localStorage.setItem("age",23)
+// console.log(localStorage.getItem("name"))
+// console.log(localStorage.getItem("age"))
+// console.log(JSON.parse(localStorage.getItem("obj")))
+
+// localStorage.removeItem("age")
+
+//localstroge.clear()
+
+// let obj={
+//     title:"Macbook",
+//     description: "Macbook Pro",
+// }
+
+// sessionStorage.setItem("obj",JSON.stringify(obj))
+// sessionStorage.setItem("name","chirkut")
+// sessionStorage.setItem("age",23)
+// console.log(sessionStorage.getItem("name"))
+// console.log(sessionStorage.getItem("age"))
+// console.log(JSON.parse(sessionStorage.getItem("obj")))
+
+// sessionStorage.removeItem("age")
+
+//localstroge.clear()
+
+document.cookie="name=Devendra; expires-sat 21 Feb 2026 12:00:00 UTC"
+document.cookie="age=23; expires=satb21 feb 2026 12:00:00 UTC"
+
+console.log(document.cookie)
+
+async function sample() {
+    await fetch("http://127.0.0.1:5500/index.html")
+}
+sample()
